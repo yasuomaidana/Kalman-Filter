@@ -1,0 +1,12 @@
+services:
+  jupyter-octave:
+    build: .
+    container_name: jupyter-octave
+    ports:
+      - "8888:8888"
+    volumes:
+      # Maps a local 'work' folder to the container's working directory
+      - ../code:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes  # Starts JupyterLab instead of the classic notebook UI
+    restart: unless-stopped
