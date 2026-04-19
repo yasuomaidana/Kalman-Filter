@@ -16,12 +16,28 @@ To verify it worked, ask uv to list the available kernels:
 
 Bash
 uv run jupyter kernelspec list
-## DataSpell Configuration
-Restart DataSpell: If you had it open, a restart helps it refresh the available Jupyter kernels.
+## Code Completion and Documentation
+To get IDE-like features (as-you-type completion, documentation hovers) in JupyterLab or DataSpell, you can use the native Octave kernel features.
 
-Select Kernel: Open your .ipynb file. In the top-right corner, click the kernel name and select Octave.
+### For JupyterLab (Automatic in Docker)
+The Docker setup now includes **Continuous Hinting** (as-you-type completion) and **texinfo** (for built-in documentation). 
+1.  **Autocomplete:** Simply start typing a function name (e.g., `ss` or `lsim`) and suggestions will appear automatically.
+2.  **Documentation:** Press `Shift + Tab` while your cursor is on a function name to see its signature and documentation.
 
-Environment Sync: Ensure that the Python Interpreter selected for your DataSpell project is the same one where you just ran the uv pip install.
+### For Local Setup (DataSpell / Local Jupyter)
+If you are running outside of Docker, follow these steps:
+
+1.  **Enable Continuous Hinting:**
+    - Go to **Settings** > **Settings Editor**.
+    - Search for **Code Completion**.
+    - Check **Continuous Hinting**.
+    - This will make completions appear without pressing `Tab`.
+
+2.  **Documentation Support:**
+    Ensure you have `texinfo` installed on your system (e.g., `brew install texinfo` on macOS or `sudo apt install texinfo` on Linux). This allows the Octave kernel to provide helpful tooltips when you press `Shift+Tab`.
+
+3.  **DataSpell Configuration:**
+    DataSpell has built-in support for Octave highlighting. Ensure that your Python interpreter is the same one where you installed `octave_kernel`.
 
 ## Troubleshooting the Path
 If you run a cell and get an error saying octave is not found, you need to tell the kernel exactly where your Octave installation lives.
