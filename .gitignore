@@ -1,0 +1,17 @@
+# Obsidian settings
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/sync-conflict-*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs
+.idea/
+**/.idea/
+
+# MacOS
+.DS_Store
+
+# Temporary files
+*.bkp

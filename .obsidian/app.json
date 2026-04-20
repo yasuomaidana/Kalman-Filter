@@ -1,0 +1,7 @@
+{
+  "userIgnoreFilters": [
+    "code/",
+    "octave-workspace/"
+  ],
+  "alwaysUpdateLinks": true
+}
