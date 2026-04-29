@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     octave-signal \
     python3 \
     python3-pip \
+    python3-sympy \
     curl \
     git \
     build-essential \
