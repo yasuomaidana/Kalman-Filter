@@ -49,8 +49,8 @@ $$z_{k+1}=h\left(x_k,u_k,v_k\right)$$
 $$\dot{x}(t)=Ax(t)+Bu(t)+w(t)$$
 $$z(t) = Cx(t)+Du(t)+v(t)$$
 Where:
-- $w(t)$  <ins>process noise</ins>. Notice that it affects the dynamics of the model by making **direct changes to the evolution** of $x(t)$
-- $v(t)$ <ins>sensor noise</ins>. Notice that it **does not affect the dynamics of the model**; it affects only the measurement
+- $w(t) \in \mathbb{R}^n$  <ins>process noise</ins>. Notice that it affects the dynamics of the model by making **direct changes to the evolution** of $x(t)$
+- $v(t)\in \mathbb{R}^m$ <ins>sensor noise</ins>. Notice that it **does not affect the dynamics of the model**; it affects only the measurement
 - $x(t)\in\mathbb{R}^n,z(t)\in\mathbb{R}^m,v(t)\in\mathbb{R}^m$
 - $A \in \mathbb{R}^{n\times n}$ <ins>system matrix</ins>. It models the evolution of the state in the absence of input. 
 - $B \in \mathbb{R}^{n\times r}$  <ins>input matrix</ins>. It defines how linear combinations of $u(t)$ impact the evolution of the state.  

@@ -1,5 +1,5 @@
  
-Understanding the inner workings of Kalman Filters (KF) is crucial for robust application to real-world problems. While basic implementation can be learned quickly, the subject has immense depth.
+Understanding the inner workings of Kalman Filters (KF) is crucial for robust applications to real-world problems. While basic implementation can be learned quickly, the subject has immense depth.
 
 ## Key Reasons for Deep Understanding
 
@@ -16,6 +16,7 @@ Many applications require mathematical and procedural modifications to standard 
 *   **Example:** Tracking marker dots on actors.
 *   **Challenges:** Data association (linking measurements to the correct dots) and tracking when markers are obscured.
 
+
 ### 2. Nonlinear Systems and Sensor Fusion
 *   **Example:** Tracking uncooperative targets (search-and-rescue).
 *   **Challenges:** Nonlinear relationships between measurements (radar azimuth/elevation) and position, out-of-sequence measurements from multiple platforms, and complex sensor fusion.
@@ -30,4 +31,4 @@ Many applications require mathematical and procedural modifications to standard 
 
 ### 5. Navigation and Drift Correction
 *   **Example:** Quadrotor drone localization.
-*   **Challenges:** Correcting the inherent drift of inertial-navigation systems using intermittent GPS measurements.
+*   **Challenges:** Correcting the inherent drift of inertial navigation systems using intermittent GPS measurements.
