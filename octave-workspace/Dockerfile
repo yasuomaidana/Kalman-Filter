@@ -27,13 +27,14 @@ RUN uv pip install --system --no-cache jupyterlab octave_kernel jupytext && \
     python3 -m octave_kernel install
 
 # 4. Create user with UID 1000 (Standard for Host-to-Container mapping)
-# RUN useradd -m -u 1000 -s /bin/bash jovyan
+RUN useradd -m -u 1000 -s /bin/bash jovyan
 
 # 5. Global Settings (Autocompletion + DARK THEME)
 RUN mkdir -p /usr/local/share/jupyter/lab/settings && \
     echo '{ \
         "@jupyterlab/completer-extension:manager": {"continuousHinting": true}, \
         "@jupyterlab/apputils-extension:themes": {"theme": "JupyterLab Dark"} \
+        "@jupyterlab/inspector-extension:inspector": {"set_launch_button": true} \
     }' > /usr/local/share/jupyter/lab/settings/overrides.json
 
 # 6. Install Symbolic Package as Root (Global)
@@ -47,10 +48,10 @@ RUN octave --eval "pkg install -forge -global symbolic; pkg load symbolic; syms 
 #    echo "pkg load symbolic;" >> /home/jovyan/.octaverc && \
 #    chown -R jovyan:jovyan /home/jovyan
 
-RUN useradd -m -s /bin/bash jovyan
+# RUN useradd -m -s /bin/bash jovyan
 USER jovyan
 WORKDIR /home/jovyan/work
 
 EXPOSE 8888
 
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--ServerApp.token=", "--ServerApp.password="]
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--ServerApp.token=hi", "--ServerApp.password="]
