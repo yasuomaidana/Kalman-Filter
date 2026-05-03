@@ -1,0 +1,6 @@
+setenv('PYTHON', '/usr/bin/python3');
+warning ("off", "Octave:graphics-toolkit-selection"); % Suppress the warning about graphics toolkit selection
+graphics_toolkit ("gnuplot"); % Force gnuplot for headless Docker use
+pkg load control;
+pkg load signal;
+pkg load symbolic;
