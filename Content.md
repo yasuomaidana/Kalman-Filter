@@ -3,4 +3,4 @@
 3. [[Understanding the time-domain response of a state-space model]]
 	1. [[Illustrating the time-domain response]]
 	2. [[Converting continuous-time state-space models to discrete-time]]
-	3. [[Is it even possible for a KF to estimate this model’s state]]
+	3. [[Is it even possible for a KF to estimate this model state]]
