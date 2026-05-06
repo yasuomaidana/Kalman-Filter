@@ -7,7 +7,7 @@ A *model* of the system and its state dynamics is assumed to be known
 
 A system’s *state* is a vector of values that completely summarizes the effects of the past on the system.
 
-![[Model.svg]]
+![Model](../assets/Model.svg)
 Measured Output and Predicted Output should be similar
 
 ## Why do we need a model?
@@ -62,6 +62,6 @@ Where:
 ## Kalman Filters as Sequential probabilistic inference
 The Kalman Filter is special case of sequential probabilistic inference (SPI). Our goal is to estimate as best we can (in some sense) the values of state vector $x_k$ given all past and present input and output measurements $\mathbb{U}_k=\left\{u_0,u_1,\dots,u_k \right\}$ and $\mathbb{Z}_k=\left\{z_0,z_1,\dots,z_k \right\}$ respectively.
 
-![[Observed unobserved.svg]]
+![Observed unobserved](../assets/Observed unobserved.svg)
 ### What's a probabilistic inference?
 A general type of state estimator, of which Kalman filter is a special case. The present state estimate is computed recursively based on the prior estimate and new input and output measurements.

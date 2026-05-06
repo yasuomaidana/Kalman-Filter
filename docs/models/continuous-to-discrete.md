@@ -2,11 +2,11 @@ Computer monitoring of real-time systems requires analog-to-digital (A2D) and di
 
 ## Control Design
 
-![[Control Design.svg]]
+![Control Design](../assets/Controll Design.svg)
 > If sampling is so much faster than the plant process, we can skip the discretization
 
 ## Discrete-time state-space models
-![[Digital-to-analog.svg]]
+![Digital-to-analog](../assets/Digital-to-analog.svg)
 Linear discrete-time systems can also be represented in state-space form:
 $$x_{k+1}=A_dx_k+B_du_k+w_k$$
 $$z_k=C_dx_k+D_du_k+v_k$$
@@ -24,7 +24,7 @@ Where:
 - $D_du_k$ is the feedthrough (current input effects)
 
 ## Converting plant dynamics
-![[Converting Plant Dynamics.svg]]
+![Converting Plant Dynamics](../assets/Converting Plant Dynamics.svg)
 
 Then, by using integrator factor method we get
 $$\dot{x}(t)=Ax(t)+Bu(t)\rightarrow\frac{d}{dt}\left(e^{-At}x(t)\right)=e^{-At}Bu(t)$$

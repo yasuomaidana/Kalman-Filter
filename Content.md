@@ -1,6 +1,8 @@
-1. [[What are some key Kalman-filter concepts?]]
-2. [[Why is it important to understand KF internals]]
-3. [[Understanding the time-domain response of a state-space model]]
-	1. [[Illustrating the time-domain response]]
-	2. [[Converting continuous-time state-space models to discrete-time]]
-	3. [[Is it even possible for a KF to estimate this model state]]
+# Table of Contents
+
+1. [Key Kalman Filter Concepts](docs/theory/concepts.md)
+2. [Why Understand KF Internals?](docs/theory/why-kf-internals.md)
+3. [Time-Domain Response of State-Space Models](docs/models/state-space-time-domain.md)
+    1. [Illustrating Time-Domain Response](docs/models/time-domain-response-illustration.md)
+    2. [Converting Continuous-Time to Discrete-Time](docs/models/continuous-to-discrete.md)
+    3. [Observability and Estimation](docs/models/observability-and-estimation.md)
